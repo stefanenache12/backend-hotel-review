@@ -11,4 +11,44 @@
         height: 100vh;
         overflow-y: scroll;
     }
+
+    .asside_menu {
+        height: calc(100vh - 119px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            li {
+                padding: 10px 0;
+            }
+            a {
+                text-decoration: none;
+                color: $third-color;
+                font-size: 1.2rem;
+                font-weight: 700;
+                transition: color 0.3s ease;
+
+                &:hover,
+                &:active {
+                    color: $second-color;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    .lg_asside {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .sm_asside {
+        display: none;
+    }
 }
