@@ -1,2 +1,14 @@
 @import "../utility/variables.scss";
 @import "../utility/mixins.scss";
+
+.dashboard {
+    .asside {
+        height: 100vh;
+        background-color: $primary-color;
+    }
+
+    .main {
+        height: 100vh;
+        overflow-y: scroll;
+    }
+}

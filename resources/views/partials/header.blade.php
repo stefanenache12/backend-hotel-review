@@ -1,47 +1,34 @@
-<div class="w-100 pt-4 pb-4">
-    <div class="container align-middle">
-        <div class="row align-items-center">
-            <div class="logo col-4">
-                <a href="/">
-                    <h1>
-                        LOGO
-                    </h1>
-                </a>
-            </div>
-            <div class="col-4">
-    
-            </div>
-            <div class="nav-links col-4">
-                <ul class="d-flex align-items-center mb-0">
+<div class="container">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid py-2">
+            <a class="navbar-brand" href="/">
+                <img class="w-50" src="img/logo1.png" alt="Review Hub Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
                     @auth
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('admin.dashboard') }}">Dashboard</a>
-                        </li>
-                        <li>
-                            <div>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-            
-                                    <button type="submit" class="btn btn-outline-danger btn-sm rounded-pill">
-                                        Log Out
-                                    </button>
-                                </form>
-                            </div>
-                        </li>
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a>
+                    <a class="nav-link" href="">
+                        <div>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+        
+                                <button type="submit" class="btn btn-outline-danger btn-sm rounded-pill">
+                                    Log Out
+                                </button>
+                            </form>
+                        </div>
+                    </a>
                     @else
-                        <li>
-                            <a href="{{ route('login') }}">Login</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('register') }}">Register</a>
-                        </li>
+                    <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    <a class="nav-link" href="{{ route('register') }}">Registrati</a>
                     @endauth
-                </ul>
+                </div>
             </div>
         </div>
-        
-    </div>
+    </nav>
 </div>

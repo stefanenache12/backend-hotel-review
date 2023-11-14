@@ -2,30 +2,14 @@
 @import "../utility/mixins.scss";
 
 header {
-
-    a {
-        text-decoration: none;
-        color: black;
+    .bg-body-tertiary{
+        --bs-tertiary-bg-rgb:white;
     }
-    
-    ul {
-        list-style: none;
-        justify-content: flex-end;
+    .container-fluid {
+        padding: 0;
 
-        li {
-            padding-left: 15px;
-            transition: all 0.3s ease;
-            
-            a {
-                text-decoration: none;
-                color: black;
-                font-size: 1.1rem;
-                transition: color 0.3s ease;
-
-                &:hover {
-                    color: blue;
-                }
-            }
+        .navbar-collapse {
+            justify-content: flex-end;
         }
     }
 }

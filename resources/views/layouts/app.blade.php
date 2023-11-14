@@ -11,11 +11,8 @@
         @vite('resources/js/app.js')
     </head>
     <body>
-        <header>
-            @include('partials.header')
-        </header>
-        <main class="py-4">
-            <div class="container">
+        <main>
+            <div>
                 @yield('main-content')
             </div>
         </main>
